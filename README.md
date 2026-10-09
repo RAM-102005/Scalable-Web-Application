@@ -35,6 +35,10 @@ CloudWatch metrics → Auto Scaling Policy → Adjust EC2 capacity
 ## Screenshots
 Screenshots of the AWS configuration, scaling activity, monitoring and running website are available in the [screenshots folder](screenshots/).
 
+![AWS Configuration](screenshots/Screenshot%202026-10-08%20234845.png)
+
+![AWS Monitoring](screenshots/Screenshot%202026-10-09%20000336.png)
+
 ## Security
 - Used security groups to control inbound traffic.
 - Do not upload access keys, passwords, private keys or other credentials.
