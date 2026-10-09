@@ -43,6 +43,38 @@ Screenshots of the AWS configuration, scaling activity, monitoring and running w
 
 ![AWS Monitoring](screenshots/Screenshot%202026-10-09%20000336.png)
 
+## Screenshots
+
+The following screenshots demonstrate the AWS infrastructure configuration, Auto Scaling, CloudWatch monitoring, and running web application.
+
+### Running Website
+
+![Running Website](screenshots/Screenshot%202026-10-08%20234845.png)
+
+### AWS Configuration
+
+![AWS Configuration](screenshots/Screenshot%202026-10-08%20234845.png)
+
+### Auto Scaling Activity
+
+![Auto Scaling Activity](screenshots/Screenshot%202026-10-08%20235838.png)
+
+### Auto Scaling Configuration
+
+![Auto Scaling Configuration](screenshots/Screenshot%202026-10-09%20000002.png)
+
+### Auto Scaling Group Details
+
+![Auto Scaling Group](screenshots/Screenshot%202026-10-09%20001624.png)
+
+### Amazon Machine Image (AMI)
+
+![Amazon Machine Image](screenshots/Screenshot%202026-10-09%20000512.png)
+
+### CloudWatch Monitoring
+
+![CloudWatch Monitoring](screenshots/Screenshot%202026-10-09%20001220.png)
+
 ## Security
 - Used security groups to control inbound traffic.
 - Do not upload access keys, passwords, private keys or other credentials.
