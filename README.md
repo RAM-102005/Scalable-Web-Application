@@ -16,6 +16,10 @@ User → Application Load Balancer → Target Group → EC2 Instances managed by
 
 CloudWatch metrics → Auto Scaling Policy → Adjust EC2 capacity
 
+### AWS Architecture Diagram
+
+![AWS Scalable Web Application Architecture](screenshots/architecture-diagram.jpeg)
+
 ## Implementation Steps
 1. Configured a security group for the web application.
 2. Created an EC2 launch template.
