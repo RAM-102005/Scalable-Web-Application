@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scalable Web Application</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f3f6fb;color:#18243a}
+header{background:#101d35;color:white;padding:22px 7%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.logo{font-size:21px;font-weight:bold}
+.tag{background:#263d60;padding:9px 14px;border-radius:20px;font-size:13px}
+main{max-width:1050px;margin:auto;padding:35px 20px}
+.hero{background:linear-gradient(120deg,#162c53,#2369ad);color:white;padding:48px 35px;border-radius:18px}
+.hero h1{font-size:35px;margin:0 0 14px}
+.hero p{line-height:1.7;color:#e3efff}
+.btn{background:#ff9900;border:0;border-radius:8px;padding:13px 20px;font-weight:bold;cursor:pointer;margin-top:15px}
+h2{margin-top:38px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:white;border-radius:14px;padding:24px;box-shadow:0 4px 18px #172b4d12}
+.card h3{margin-top:0;color:#1761a3}
+.card p{line-height:1.6;color:#5b6778}
+.status{color:#12844b;font-weight:bold}
+code{overflow-wrap:anywhere}
+footer{text-align:center;padding:28px;color:#697586}
+@media(max-width:600px){.hero h1{font-size:27px}.hero{padding:30px 22px}}
+</style>
+</head>
+<body>
+<header>
+ <div class="logo">☁ AWS Cloud Project</div>
+ <div class="tag">Scalable Infrastructure</div>
+</header>
+<main>
+ <section class="hero">
+  <h1>Scalable Web Application</h1>
+  <p>A modern web application deployed on Amazon EC2
+  with Application Load Balancer and Auto Scaling.</p>
+  <button class="btn" onclick="refreshServer()">Refresh Server ↻</button>
+ </section>
+
+ <h2>Infrastructure Dashboard</h2>
+ <div class="grid">
+  <div class="card">
+   <h3>🖥 Amazon EC2</h3>
+   <p>Cloud servers hosting our web application.</p>
+   <div class="status">● Application Deployed</div>
+  </div>
+  <div class="card">
+   <h3>⚖ Load Balancer</h3>
+   <p>Distributes incoming requests across healthy instances.</p>
+   <div class="status">● Configured</div>
+  </div>
+  <div class="card">
+   <h3>📈 Auto Scaling</h3>
+   <p>Adjusts the number of EC2 instances based on demand.</p>
+   <div class="status">● Configured</div>
+  </div>
+ </div>
+
+ <h2>Server Information</h2>
+ <div class="card">
+  <p><strong>Server Hostname:</strong>
+   <code id="hostname">Loading...</code></p>
+  <p><strong>Request Time:</strong> <span id="time"></span></p>
+  <p><strong>Platform:</strong> AWS EC2 - Ubuntu</p>
+  <p><strong>Region:</strong> Asia Pacific (Mumbai)</p>
+ </div>
+</main>
+<footer>Built using AWS EC2 • ALB • Auto Scaling</footer>
+<script>
+function refreshServer(){
+ const url=new URL(window.location.href);
+ url.searchParams.set("refresh",Date.now());
+ window.location.href=url.toString();
+}
+document.getElementById("time").textContent=new Date().toLocaleString();
+document.getElementById("hostname").textContent=
+ "Not configured for dynamic display";
+</script>
+</body>
+</html>
